@@ -34,7 +34,7 @@ const timelineSections: TimelineSection[] = [
     items: [
       {
         year: "now",
-        text: "year 3 @ mcmaster university (chemical engineering & health sciences)"
+        text: "year 3 @ mcmaster university (chemical engineering & biochemistry)"
       },
       {
         year: "now",
