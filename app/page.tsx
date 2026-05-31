@@ -34,7 +34,7 @@ const timelineSections: TimelineSection[] = [
     items: [
       {
         year: "now",
-        text: "year 3 @ mcmaster university (chemical engineering & biochemistry)"
+        text: "year 3 @ mcmaster university (B.Eng.BME & B.H.Sc)"
       },
       {
         year: "now",
@@ -42,7 +42,11 @@ const timelineSections: TimelineSection[] = [
       },
       {
         year: "now",
-        text: "research associate @ university of calgary"
+        text: "research associate @ center for health informatics, university of calgary"
+      },
+      {
+        year: "now",
+        text: "research student @ immunology research center, mcmaster university"
       }
     ]
   },
@@ -78,7 +82,7 @@ const timelineSections: TimelineSection[] = [
       },
       {
         year: "2025",
-        text: "completed first-year engineering with a 12.0/12.0 GPA and entered chemical engineering as the top-ranked student in the cohort"
+        text: "completed first-year engineering with a 12.0/12.0 gpa and entered the chemical engineering department as the top-ranked student in the cohort"
       },
       {
         year: "2026",
@@ -86,7 +90,7 @@ const timelineSections: TimelineSection[] = [
       },
       {
         year: "2026",
-        text: "realized my work matters more than my grades. set a target GPA range of 10.0–12.0 and redirected energy toward research, engineering, and meaningful projects"
+        text: "realized my work matters more than my grades. set a target gpa range of 10.0–12.0 and redirected energy toward research, engineering, and meaningful projects"
       }
     ]
   },
