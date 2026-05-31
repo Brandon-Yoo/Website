@@ -186,7 +186,7 @@ function Hero() {
       <figure className="w-full max-w-80 justify-self-start md:max-w-none">
         <div className="aspect-[4/5] overflow-hidden bg-black">
           <img
-            src="/headshot.jpg"
+            src="./headshot.jpg"
             alt="headshot of brandon yoo"
             className="h-full w-full object-cover opacity-100 brightness-110 saturate-0 transition-opacity duration-300 hover:opacity-100"
           />
