@@ -1,0 +1,10 @@
+.next
+node_modules
+dist/
+dist-electron/
+.vscode/
+.env
+.env.local
+out
+*.log
+.env*
