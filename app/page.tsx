@@ -156,9 +156,10 @@ const backgroundBlocks: BackgroundBlock[] = [
     items: [
       "athletics (dance, powerlifting)",
       "community building (nucleate, cansbridge)",
-      "mindfullness (philosophy, meditation)",
+      "self-improvement (philosophy, meditation)",
       "entrepreneurship",
-      "travel"
+      "travel",
+      "korea"
     ]
   }
 ];
