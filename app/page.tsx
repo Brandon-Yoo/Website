@@ -34,7 +34,7 @@ const timelineSections: TimelineSection[] = [
     items: [
       {
         year: "now",
-        text: "year 3 @ mcmaster university (B.Eng.BME & B.H.Sc)"
+        text: "year 3 @ mcmaster university (b.eng.bme, b.h.sc)"
       },
       {
         year: "now",
@@ -118,7 +118,7 @@ const projects: Project[] = [
     href: "https://nucleate.org/dojo/"
   },
   {
-    title: "directed evolution of cspA",
+    title: "directed evolution of cspa",
     description:
       "engineered and modeled bacterial gene variants to improve protein expression at low temperatures",
     href: "https://idec-teams.github.io/2025_McMaster_BioDesign/assets/lab-report-BM41Gsf6.pdf"
@@ -151,8 +151,8 @@ const backgroundBlocks: BackgroundBlock[] = [
       "programming (python, r, sql, js/ts)",
       "foss (linux, git, bash, vim, latex)",
       "machine learning (tensorflow, pytorch, jax)",
-      "compbio: (rnaseq, GRN, docking, MD, multiomics, drug discovery)",
-      "research (experimental design, literature review, scientific communication)"
+      "compbio: (rnaseq, dge, rna velocity, grn, docking, md, multiomics, spatial bio, drug discovery)",
+      "research (experimental design, literature reviews, scientific communication)"
     ]
   },
   {
@@ -335,7 +335,7 @@ export default function Home() {
               </a>
             ))}
           </nav>
-          <p className="text-sm text-zinc-600">updated May 2026</p>
+          <p className="text-sm text-zinc-600">updated June 2026</p>
         </div>
       </footer>
     </PageShell>
