@@ -38,15 +38,15 @@ const timelineSections: TimelineSection[] = [
       },
       {
         year: "now",
-        text: "ai r&d @ samsung medical center, seoul, south korea"
+        text: "breast cancer drug discovery @ samsung medical center, seoul, south korea"
       },
       {
         year: "now",
-        text: "research associate @ center for health informatics, university of calgary"
+        text: "ml-based stroke triage @ center for health informatics, university of calgary"
       },
       {
         year: "now",
-        text: "research student @ immunology research center, mcmaster university"
+        text: "drug optimization @ immunology research center, mcmaster university"
       }
     ]
   },
