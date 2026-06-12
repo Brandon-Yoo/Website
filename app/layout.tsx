@@ -14,14 +14,17 @@ const geistMono = Geist_Mono({
   display: "swap"
 });
 
+const siteUrl = "https://brandonyoo.com";
+const siteName = "brandon yoo";
+const siteDescription = "engineer, scientist, artist.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://brandonyoo.com"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "brandon yoo",
-    template: "%s | brandon yoo"
+    default: siteName,
+    template: `%s | ${siteName}`
   },
-  description:
-    "personal website of brandon yoo, an engineering and health sciences student working across biology, software, and movement.",
+  description: siteDescription,
   keywords: [
     "Brandon Yoo",
     "chemical engineering",
@@ -30,20 +33,27 @@ export const metadata: Metadata = {
     "computational biology",
     "dance"
   ],
-  authors: [{ name: "Brandon Yoo" }],
+  authors: [{ name: "Brandon Yoo", url: siteUrl }],
   creator: "Brandon Yoo",
+  alternates: {
+    canonical: "/"
+  },
+  formatDetection: {
+    telephone: false
+  },
   openGraph: {
-    title: "brandon yoo",
-    description:
-      "engineer, scientist, mover.",
-    url: "https://brandonyoo.com",
-    siteName: "brandon yoo",
+    title: siteName,
+    description: siteDescription,
+    url: siteUrl,
+    siteName,
+    locale: "en_US",
     type: "website"
   },
   twitter: {
     card: "summary",
-    title: "brandon yoo",
-    description: "engineer, scientist, mover."
+    title: siteName,
+    description: siteDescription,
+    creator: "@BrandonWSYoo"
   },
   robots: {
     index: true,
@@ -63,8 +73,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
+      <body className="min-h-dvh antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-black"
+        >
+          skip to content
+        </a>
+        {children}</body>
     </html>
   );
 }
