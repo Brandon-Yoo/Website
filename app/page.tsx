@@ -36,7 +36,7 @@ const currentGroups: CurrentGroup[] = [
   {
     label: "research",
     items: [
-      "breast cancer drug-target identification @ samsung medical center, seoul",
+      "breast cancer drug discovery @ samsung medical center, seoul",
       "neural-ode stroke triage @ center for health informatics, university of calgary",
       "covalent drug optimization @ immunology research center, mcmaster"
     ]
