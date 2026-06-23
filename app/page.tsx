@@ -52,7 +52,7 @@ const currentGroups: CurrentGroup[] = [
 ];
 
 const originsProse =
-  "i started dancing in 2011 and spent the next decade training to do it professionally. trying to move better turned into strength training, which turned into studying exercise physiology to understand what my body was actually doing. that curiosity kept widening — from how muscles work to how cells do — until it landed me in biomedical engineering. i still think like a dancer: i need to know the mechanism, i'll repeat it until it's right, and i won't let a detail slide.";
+  "i started dancing in 2011 and spent the next decade training to do it professionally. trying to move better turned into strength training, which turned into studying exercise physiology to understand what my body was actually doing. that curiosity kept widening, from how muscles work to how cells do, until it landed me in biomedical engineering.";
 
 const timelineSections: TimelineSection[] = [
   {
@@ -73,7 +73,7 @@ const timelineSections: TimelineSection[] = [
       },
       {
         year: "2026",
-        text: "shifted focus from maximizing gpa to research and building — holding grades at a deliberate 10.0–12.0 to protect time for the work that compounds"
+        text: "shifted focus from maximizing gpa to research and building, holding grades at a deliberate 10.0–12.0 to protect time for the work that compounds"
       }
     ]
   },
