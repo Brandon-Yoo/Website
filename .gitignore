@@ -3,6 +3,7 @@ node_modules
 dist/
 dist-electron/
 .vscode/
+.claude/
 .env
 .env.local
 out

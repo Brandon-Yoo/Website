@@ -27,51 +27,34 @@ type BackgroundBlock = {
   items: string[];
 };
 
+type CurrentGroup = {
+  label: string;
+  items: string[];
+};
+
+const currentGroups: CurrentGroup[] = [
+  {
+    label: "research",
+    items: [
+      "breast cancer drug-target identification @ samsung medical center, seoul",
+      "neural-ode stroke triage @ center for health informatics, university of calgary",
+      "covalent drug optimization @ immunology research center, mcmaster"
+    ]
+  },
+  {
+    label: "studies",
+    items: ["year 3 @ mcmaster university (b.eng.bme, b.h.sc)"]
+  },
+  {
+    label: "dance",
+    items: ["captain @ mcmaster varsity dance team"]
+  }
+];
+
+const originsProse =
+  "i started dancing in 2011 and spent the next decade training to do it professionally. trying to move better turned into strength training, which turned into studying exercise physiology to understand what my body was actually doing. that curiosity kept widening — from how muscles work to how cells do — until it landed me in biomedical engineering. i still think like a dancer: obsessed with mechanism, repetition, and getting the details exactly right.";
+
 const timelineSections: TimelineSection[] = [
-  {
-    id: "currently",
-    title: "currently",
-    items: [
-      {
-        year: "now",
-        text: "year 3 @ mcmaster university (b.eng.bme, b.h.sc)"
-      },
-      {
-        year: "now",
-        text: "breast cancer drug discovery @ samsung medical center, seoul, south korea"
-      },
-      {
-        year: "now",
-        text: "ml-based stroke triage @ center for health informatics, university of calgary"
-      },
-      {
-        year: "now",
-        text: "drug optimization @ immunology research center, mcmaster university"
-      }
-    ]
-  },
-  {
-    id: "origins",
-    title: "origins",
-    items: [
-      {
-        year: "2011",
-        text: "started training to become a professional dancer"
-      },
-      {
-        year: "2021",
-        text: "turned to strength training to further my abilities as a performer"
-      },
-      {
-        year: "2022",
-        text: "began studying exercise physiology to optimize my training and understand my body"
-      },
-      {
-        year: "2024",
-        text: "curiosity evolved toward human biology as a whole, leading to a path in biomedical engineering"
-      }
-    ]
-  },
   {
     id: "academics",
     title: "academics",
@@ -82,7 +65,7 @@ const timelineSections: TimelineSection[] = [
       },
       {
         year: "2025",
-        text: "completed first-year engineering with a 12.0/12.0 gpa and entered the chemical engineering department as the top-ranked student in the cohort"
+        text: "completed first-year engineering with a 12.0/12.0 gpa, entering the chemical engineering department as the top-ranked student in the cohort"
       },
       {
         year: "2026",
@@ -90,7 +73,7 @@ const timelineSections: TimelineSection[] = [
       },
       {
         year: "2026",
-        text: "realized my work matters more than my grades. set a target gpa range of 10.0–12.0 and redirected energy toward research, engineering, and meaningful projects"
+        text: "shifted focus from maximizing gpa to research and building — holding grades at a deliberate 10.0–12.0 to protect time for the work that compounds"
       }
     ]
   },
@@ -104,7 +87,7 @@ const timelineSections: TimelineSection[] = [
       },
       {
         year: "2026",
-        text: "ai r&d @ samsung medical center: developing machine learning models for antibody-drug conjugate target discovery in breast cancer"
+        text: "ai r&d @ samsung medical center: building a spatial-transcriptomics pipeline (diffusion models → gnn) for breast cancer drug-target identification"
       }
     ]
   }
@@ -112,15 +95,9 @@ const timelineSections: TimelineSection[] = [
 
 const projects: Project[] = [
   {
-    title: "nucleate",
-    description:
-      "founded mcmaster's node for entrepreneurial-minded biotech students",
-    href: "https://nucleate.org/dojo/"
-  },
-  {
     title: "directed evolution of cspa",
     description:
-      "engineered and modeled bacterial gene variants to improve protein expression at low temperatures",
+      "modeled 5'utr variants of e. coli's cspa cold-shock element, finding mutations with up to 2.6× higher translation initiation for cold-inducible protein expression",
     href: "https://idec-teams.github.io/2025_McMaster_BioDesign/assets/lab-report-BM41Gsf6.pdf"
   },
   {
@@ -130,29 +107,30 @@ const projects: Project[] = [
     href: "https://www.youtube.com/watch?v=Tcbk-nEwViQ"
   },
   {
-    title: "yooform",
+    title: "yooart",
     description:
-      "built a choreography planning platform after becoming frustrated with existing solutions",
-    href: "https://github.com/Brandon-Yoo/YooForm"
+      "building a desktop app that extracts full-body and finger-level motion from choreography video and previsualizes it in an open 3d production environment",
+    href: "https://yoo.art"
   }
 ];
 
 const contactLinks: ContactLink[] = [
   { label: "brandonwsyoo@outlook.com", href: "mailto:brandonwsyoo@outlook.com" },
   { label: "linkedin", href: "https://www.linkedin.com/in/brandonwsyoo/" },
+  { label: "github", href: "https://github.com/Brandon-Yoo" },
   { label: "x", href: "https://x.com/BrandonWSYoo" },
-  { label: "instagram", href: "https://www.instagram.com/brandonwayoo/" },
+  { label: "instagram", href: "https://www.instagram.com/brandonwayoo/" }
 ];
 
 const backgroundBlocks: BackgroundBlock[] = [
   {
     title: "toolbox",
     items: [
-      "programming (python, r, sql, js/ts)",
-      "foss (linux, git, bash, vim, latex)",
       "machine learning (tensorflow, pytorch, jax)",
       "compbio: (rnaseq, dge, rna velocity, grn, docking, md, multiomics, spatial bio, drug discovery)",
-      "research (experimental design, literature reviews, scientific communication)"
+      "programming (python, r, sql, js/ts)",
+      "foss (linux, git, bash, vim, latex)",
+      "wet lab (molecular cloning, pcr, flow cytometry, mass spec, nmr, cell culture)"
     ]
   },
   {
@@ -202,8 +180,17 @@ function Hero() {
           brandon yoo
         </h1>
         <p className="mt-5 text-xl leading-8 text-zinc-400 sm:text-[1.35rem]">
-          engineer, scientist, artist.
+          i build computational tools for drug discovery, clinical ai, and performing arts.
         </p>
+        <a
+          href="mailto:brandonwsyoo@outlook.com"
+          className="group mt-7 inline-flex items-center gap-2 text-base text-zinc-300 transition-colors duration-200 hover:text-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-300/60 focus:ring-offset-2 focus:ring-offset-black sm:text-lg md:justify-end"
+        >
+          get in touch
+          <span className="transition-transform duration-200 group-hover:translate-x-1">
+            →
+          </span>
+        </a>
       </div>
     </section>
   );
@@ -252,6 +239,43 @@ function TimelineList({ items }: { items: TimelineItem[] }) {
         </article>
       ))}
     </div>
+  );
+}
+
+function CurrentGroups() {
+  return (
+    <div className="divide-y divide-white/[0.07]">
+      {currentGroups.map((group) => (
+        <div
+          key={group.label}
+          className="grid gap-3 py-5 first:pt-0 last:pb-0 sm:grid-cols-[5.5rem_1fr] sm:gap-7"
+        >
+          <p className="font-mono text-[0.72rem] uppercase tracking-[0.14em] text-zinc-600">
+            {group.label}
+          </p>
+          <ul className="flex max-w-2xl flex-col gap-2">
+            {group.items.map((item, index) => (
+              <li
+                key={item}
+                className={`text-base leading-7 sm:text-[1.05rem] ${
+                  index === 0 ? "text-zinc-200" : "text-zinc-400"
+                }`}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function OriginsProse() {
+  return (
+    <p className="max-w-2xl text-base leading-7 text-zinc-400 sm:text-[1.05rem]">
+      {originsProse}
+    </p>
   );
 }
 
@@ -307,6 +331,14 @@ export default function Home() {
   return (
     <PageShell>
       <Hero />
+
+      <Section id="currently" title="currently">
+        <CurrentGroups />
+      </Section>
+
+      <Section id="origins" title="origins">
+        <OriginsProse />
+      </Section>
 
       {timelineSections.map((section) => (
         <Section key={section.id} id={section.id} title={section.title}>
